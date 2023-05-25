@@ -1,4 +1,5 @@
 <meta charset="UTF-8">
+<h1>Programa calcular IMC</h1>
 <script>
     function saltarLinea(){
         document.write("<br>");
@@ -10,18 +11,16 @@
         document.write(frase);
     }
 
-    function calcular(peso, altura){
+    function calcularImc (peso, altura){
         imc = peso/(altura*altura);
         return(imc);
     }
 
-    imprimir("El IMC de sara es " + calcular(58,1.67));
+    nombreInformado = prompt("¿Cuál es su nombre?")
+    pesoInformado = prompt(nombreInformado + " informe su peso");
+    alturaInformada = prompt(nombreInformado + " informe su altura");
 
-    saltarLinea();
-    
-    imprimir("El IMC de Luis es " + calcular(55,1.57));
+    imcCalculado = calcularImc(pesoInformado,alturaInformada);
 
-    saltarLinea();
-
-    imprimir ("El promedio del indice de masa corporal de Sara y Luis es: " + (calcular(58, 1.67) + calcular(55,1.57))/2);
+    imprimir (nombreInformado + " su IMC calculado es: " + imcCalculado);
 </script>
