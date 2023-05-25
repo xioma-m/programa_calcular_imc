@@ -1,8 +1,11 @@
 <meta charset="UTF-8">
 <script>
-    var peso = 57;
-    var altura = 1.63;
-
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+    
     function imprimir (frase){
         document.write(frase);
     }
@@ -11,6 +14,14 @@
         imc = peso/(altura*altura);
         return(imc);
     }
+
+    imprimir("El IMC de sara es " + calcular(58,1.67));
+
+    saltarLinea();
+    
+    imprimir("El IMC de Luis es " + calcular(55,1.57));
+
+    saltarLinea();
 
     imprimir ("El promedio del indice de masa corporal de Sara y Luis es: " + (calcular(58, 1.67) + calcular(55,1.57))/2);
 </script>
